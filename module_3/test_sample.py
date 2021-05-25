@@ -1,0 +1,15 @@
+from selenium import webdriver
+driver = webdriver.Chrome()
+driver.get("http://selenium1py.pythonanywhere.com/ru/accounts/login/")
+browser = driver
+mail = browser.find_element_by_name("registration-email")
+mail.clear()
+mail.send_keys("12345@gmail.com")
+password = browser.find_element_by_name("registration-password1")
+password.clear()
+password.send_keys("qwerty")
+password = browser.find_element_by_name("registration-password2")
+password.clear()
+password.send_keys("qwerty")
+button = browser.find_element_by_name("registration_submit")
+button.click()
